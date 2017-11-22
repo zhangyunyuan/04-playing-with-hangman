@@ -5,7 +5,7 @@ defmodule Hangman.Application do
   def start(_type, _args) do 
     import Supervisor.Spec
     children = [
-        worker(Hangman, [], restart: :permanent)
+        worker(Hangman.Server, [], restart: :permanent)
     ]
 
     opts = [
